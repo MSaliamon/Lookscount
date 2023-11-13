@@ -398,6 +398,10 @@ body {
             color: $gray-50;
         }
     }
+    &-textbox {
+        display: flex;
+        flex-direction: column;
+    }
 }
 .mt-64 {
     margin-top: 64px;

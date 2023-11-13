@@ -1014,6 +1014,15 @@ body {
   gap: 24px;
   color: #5F6D7E;
 }
+.footer-textbox {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
 
 .mt-64 {
   margin-top: 64px;
