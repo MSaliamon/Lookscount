@@ -1,0 +1,639 @@
+@import './mixins';
+@import './reset';
+@import './vars';
+
+body {
+    background-color: $base-white;
+}
+.header {
+    @include flex(space-between, center, 0px);
+    padding: 20px 112px;
+    &-container1 {
+        @include flex(flex-start, center, 64px);
+    }
+    &-container2 {
+        @include flex(flex-start, center, 24px);
+        .gamburger {
+            display: none;
+        }
+    }
+    &__btn {
+        @include Inter(15px, 600, 22px);
+        color: $primary-600;
+    }
+}
+.nav {
+    display: flex;
+    &__list {
+        @include flex(flex-start, flex-start, 32px);
+    }
+    &__link {
+        @include Inter(15px, 600, 22px);
+        color: $gray-700;
+    }
+}
+.btn {
+    @include flex(center, center, 6px);
+    @include Inter(15px, 600, 22px);
+    padding: 12px 18px;
+    border-radius: 6px;
+    background-color:$primary-600;
+    color: $base-white;
+}
+.main {
+    @include flex(center, center, 64px);
+    flex-direction: column;
+    .section1 {
+        @include flex(center, center, 36px);
+        flex-direction: column;
+        &-container1 {
+            @include flex(center, center, 24px);
+            flex-direction: column;
+            width: 50%;
+            &__title {
+                @include Inter(52px, 700, 60px);
+                text-align: center;
+                color: $gray-700;
+            }
+            &__text {
+                @include Inter(18px, 400, 26px);
+                text-align: center;
+                color: $gray-50;
+            }
+        }
+        &-container2 {
+            @include flex(center, center, 16px);
+            &__btn {
+                @include flex(center ,center, 6px);
+                @include Inter(15px, 600, 22px);
+                padding: 12px 18px;
+                border-radius: 6px;
+                border: 1px solid $neutral-700;
+                background-color: $base-white;
+                color: $gray-700;
+
+            }
+        }
+    }
+    .section2 {
+        @include flex(center, center, 0px);
+        flex-direction: column;
+        &-text-box {
+            @include flex(center, center, 16px);
+            flex-direction: column;
+            &__title {
+                @include Inter(32px, 700, 40px);
+                color: $gray-700;
+            }
+            &__text {
+                @include Inter(16px, 400, 24px);
+                color: $gray-50;
+            }
+        }
+        &-box {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-rows: repeat(2, 1fr);
+            gap: 32px;
+            margin-top: 64px;
+            &-content {
+                @include flex(flex-start, flex-start, 24px);
+                flex-direction: column;
+                padding: 24px 32px;
+                border-radius: 5px;
+                border: 1px solid $neutral-600;
+                background: $base-white;
+                box-shadow: 0px 1px 2px 0px rgba(16, 24, 40, 0.04);
+                &-imgbox {
+                    @include flex(space-between, center, 0px);
+                    width: 100%;
+                    &__btn {
+                        @include Inter(15px, 600, 22px);
+                        @include flex(center, center, 6px);
+                        padding: 12px 18px;
+                        border-radius: 6px;
+                        border: 1px solid $neutral-700;
+                        background-color: $base-white;
+                        box-shadow: 0px 1px 2px 0px rgba(16, 24, 40, 0.04);
+                        color: $gray-700;
+
+                    }
+                }
+                &-textbox {
+                    @include flex(flex-start, flex-start, 8px);
+                    flex-direction: column;
+                    &__title {
+                        @include Inter(22px, 600, 30px);
+                        color: $gray-700;
+                    }
+                    &__text {
+                        @include Inter(16px, 400, 24px);
+                        color: $gray-50;
+                        width: 72%;
+                    }
+                }
+            }
+            .more--width {
+                width: 79%;
+            }
+        }
+        &__btn {
+            @include flex(center, center, 0px);
+            margin-top: 64px;
+            width: 20%;
+        }
+    }
+    .section3 {
+        &-text-box {
+            @include flex(center, center, 16px);
+            flex-direction: column;
+            &__title {
+                @include Inter(32px, 700, 40px);
+                color: $gray-700;
+            }
+            &__text {
+                @include Inter(16px, 400, 24px);
+                color: $gray-50;
+                text-align: center;
+                width: 80%;
+            }
+        }
+        &-container {
+            @include flex(center, center, 140px);
+            &__img2 {
+                margin: 64px 0px;
+            }
+            &-box {
+                @include flex(center, flex-start, 8px);
+                flex-direction: column;
+                width: 30%;
+                &__text1 {
+                    @include Inter(14px, 600, 20px);
+                    color: $primary-600;
+                }
+                &__text2 {
+                    @include Inter(32px, 600, 42px);
+                    color: $gray-700;
+                }
+                &__text3 {
+                    @include Inter(16px, 400, 24px);
+                }
+                &__statistic {
+                    @include flex(flex-start, flex-start, 10px);
+                    flex-direction: column;
+                }
+                &__statistic-box {
+                    @include flex(flex-start, flex-start, 8px);
+                }
+            }
+            .color--white {
+                color: $base-white;
+            }
+            .color--primary {
+                color: $primary-200;
+            }
+            
+        }
+        .blue--phone {
+            margin-top: 64px;
+            background-color: $primary-900;
+        }
+        .mt-40 {
+            margin-top: 40px;
+        }
+    }
+    .section4 {
+        &-text-box {
+            @include flex(center, center, 16px);
+            flex-direction: column;
+            &__title {
+                @include Inter(32px, 700, 40px);
+                color: $gray-700;
+            }
+            &__text {
+                @include Inter(16px, 400, 24px);
+                color: $gray-50;
+                text-align: center;
+                width: 100%;
+            }
+        }
+        &-wrapper {
+            @include flex(center, center, 32px);
+        }
+        &-container {
+            @include flex(center, center, 0px);
+            flex-direction: column;
+            width: 30%;
+            &__img {
+                width: 100%;
+                border-top-left-radius: 10px;
+                border-top-right-radius: 10px;
+            }
+        }
+        &-box {
+            @include flex(center, flex-start, 24px);
+            padding: 24px 32px;
+            flex-direction: column;
+            border-bottom-left-radius: 10px;
+            border-bottom-right-radius: 10px;
+            border: 1px solid $neutral-600;
+            &-date {
+                @include flex(flex-start, flex-start, 16px);
+                &__article-phone {
+                    @include flex(flex-start, center, 0px);
+                    padding: 4px 12px;
+                    border-radius: 5px;
+                    background-color: $primary-25;
+                }
+                &__article-text {
+                    @include Inter(14px, 500, 20px);
+                    color: $primary-600;
+                }
+            }
+            &__text {
+                @include Inter(14px, 500, 20px);
+                color: $gray-50;
+            }
+            &-textbox {
+                @include flex(flex-start, flex-start, 16px);
+                flex-direction: column;
+                width: 70%;
+                &__title {
+                    @include Inter(22px, 600, 30px);
+                    color: $gray-700;
+                }
+                &__text {
+                    @include Inter(16px, 400, 24px);
+                    color: $gray-50;
+                }
+            }
+            &-linkbox {
+                @include flex(flex-start, flex-start, 6px);
+                &__link {
+                    @include Inter(15px, 600, 22px);
+                    color: $primary-600;
+                }
+            }
+        }
+    }
+    .section5 {
+        display: flex;
+        flex-direction: column;
+        gap: 64px;
+        margin: 64px 0px;
+        &-box-textbox {
+            @include flex(center, center, 16px);
+            flex-direction: column;
+            &__title {
+                @include Inter(32px, 700, 40px);
+                color: $gray-700;
+                text-align: center;
+            }
+            &__text {
+                @include Inter(16px, 400, 24px);
+                color: $gray-50;
+                text-align: center;
+                width: 68%;
+            }
+        }
+        &-container {
+            @include flex(center, center, 48px);
+        }
+        &-box {
+            @include flex(center, center, 16px);
+            flex-direction: column;
+            &-contain {
+                &__avatar {
+                    margin-left: -16px;
+                }
+            }
+            &__text {
+                @include Inter(16px, 500, 24px);
+                color: $gray-700;
+                text-align: center;
+                width: 87%;
+            }
+            .more--width {
+                width: 89%;
+            }
+            .more--width2 {
+                width: 80%;
+            }
+            &-contain:first-child {
+                margin-left: 0px;
+            }
+            &-contain2 {
+                @include flex(flex-start, flex-start, 0px);
+            }
+        }
+    }
+    .section6 {
+        @include flex(center, center, 80px);
+        padding: 40px 64px;
+        background-color: $neutral-100;
+        &-textbox {
+            @include flex(flex-start, flex-start, 8px);
+            flex-direction: column;
+            width: 45%;
+            &__text {
+                @include Inter(14px, 600, 20px);
+                color: $primary-600;
+            }
+            &__title {
+                @include Inter(32px, 600, 42px);
+                color: $gray-700;
+            }
+        }
+        &-container {
+            &__label {
+                padding: 12px 16px;
+                background-color: $base-white;
+            }
+            &__btn {
+                @include Inter(15px, 600, 22px);
+                padding: 12px 18px;
+                background-color: $primary-600;
+                color: $base-white;
+                border-radius: 0px 6px 6px 0px;
+            }
+        }
+    }
+}
+.footer {
+    @include flex(center, center, 64px);
+    padding: 64px 150px;
+    flex-direction: column;
+    &-container {
+        @include flex(space-between, flex-start, 64px);
+    }
+    &-box1 {
+        @include flex(flex-start, flex-start, 16px);
+        flex-direction: column;
+        width: 18%;
+        &__text {
+            @include Inter(16px, 400, 24px);
+            color: $gray-50;
+        }
+        &__social {
+            @include flex(flex-start, flex-start, 24px);
+        }
+    }
+    &-box {
+        @include flex(flex-start, flex-start, 24px);
+        flex-direction: column;
+        &__title {
+            @include Inter(16px, 600, 24px);
+            color: $gray-700;
+        }
+        &__text {
+            @include Inter(16px, 500, 24px);
+            color: $gray-50;
+        }
+    }
+    &-container2 {
+        @include flex(center, center, 16px);
+        flex-direction: column;
+        &__text {
+            @include flex(16px, 400, 24px);
+            color: $gray-50;
+        }
+    }
+}
+.mt-64 {
+    margin-top: 64px;
+}
+.mt-30 {
+    margin-top: 30px;
+}
+
+
+
+@media screen and (min-width: 768px) and (max-width: 1439px) {
+    .nav {
+        display: none;
+    }
+    .header__btn {
+        display: none;
+    }
+    .header-container2 {
+        .btn {
+            display: none;
+        }
+        .gamburger {
+            display: block;
+        }
+    }
+    .main {
+        .section1-container1 {
+            width: 100%;
+            &__title {
+                width: 74%;
+            }
+            &__text {
+                width: 73%;
+            }
+        }
+        .section2 {
+            padding: 24px 32px;
+            &-text-box {
+                &__text {
+                    text-align: center;
+                    width: 87%;
+                }
+            }
+            &-box {
+                display: grid;
+                grid-template-rows: repeat(3, 1fr);
+                grid-template-columns: repeat(2, 1fr);
+                width: 96%;
+                gap: 24px; 
+            }
+            &__btn {
+                display: none;
+            }
+        }
+        .section3 {
+            &-text-box {
+                &__text {
+                    width: 79%;
+                }
+            }
+            &-container {
+                flex-direction: column-reverse;
+                &-box {
+                    width: 80%;
+                }
+            }
+            .blue--phone {
+                flex-direction: column;
+            }
+        }
+        .section4 {
+            &-wrapper {
+                display: grid;
+                grid-template-columns: repeat(2, 1fr);
+                grid-template-rows: repeat(2, 1fr);
+            }
+            &-text-box {
+                &__text {
+                    width: 79%;
+                }
+            }
+            &-container {
+                width: 100%;
+                margin-left: 50px;
+            }
+        }
+        .section5 {
+            &-box-textbox {
+                &__text {
+                    width: 90%;
+                }
+            }
+            &-container {
+                gap: 0px;
+                padding: 0px 32px;
+            }
+        }
+        .section6 {
+            flex-direction: column;
+            gap: 32px;
+            &-textbox {
+                width: 91%;
+            }
+        }
+    }
+}
+.footer {
+    padding: 64px;
+    .media--box {
+        display: none;
+    }
+}
+@media screen and (min-width: 375px) and (max-width: 767px) {
+    .header {
+        padding: 32px;
+    }
+    .nav {
+        display: none;
+    }
+    .header__btn {
+        display: none;
+    }
+    .header-container2 {
+        .btn {
+            display: none;
+        }
+        .gamburger {
+            display: block;
+        }
+    }
+    .main {
+        .section1 {
+            &-container1 {
+                &__title {
+                    @include Inter(21px, 600, 33px);
+                }
+                &__text {
+                    font-size: 12px;
+                }
+            }
+            &-container2 {
+                flex-direction: column;
+            }
+        }
+        .section2 {
+            &-text-box {
+                &__text {
+                    width: 50%;
+                }
+            }
+            &-box {
+                display: flex;
+                flex-wrap: wrap;
+            }
+            &__btn {
+                display: none;
+            }
+        }
+        .section3 {
+            &-text-box {
+                &__title {
+                    font-size: 29px;
+                }
+                &__text {
+                    width: 81%;
+                }
+            }
+            &-container {
+                flex-direction: column-reverse;
+                &-box {
+                    width: 80%;
+                    &__text2 {
+                        font-size: 30px;
+                    }
+                }
+            }
+            .blue--phone {
+                flex-direction: column;
+            }
+        }
+        .section4 {
+            &-wrapper {
+                display: flex;
+                flex-direction: column;
+                flex-wrap: wrap;
+            }
+            &-container {
+                &__img {
+                    width: 326%;
+                    max-width: 400%;
+                }
+            }
+            &-box {
+                width: 328%;
+                &-textbox {
+                    &__title {
+                        font-size: 17px;
+                    }
+                }
+            }
+        }
+        .section5 {
+            &-box {
+                &-textbox {
+                    &__text {
+                        width: 79%;
+                    }
+                }
+            }
+            &-container {
+                flex-direction: column;
+                flex-wrap: wrap;
+            }
+        }
+        .section6 {
+            flex-direction: column;
+            gap: 32px;
+            padding: 0px;
+            &-textbox {
+                width: 91%;
+            }
+        }
+    }
+    .footer {
+        display: flex;
+        padding: 0px;
+        flex-direction: column;
+        .media--box {
+            display: none;
+        }
+        &-container {
+            flex-direction: column;
+            padding: 0px;
+        }
+        &-box1__text {
+            width: 410%;
+        }
+    }
+}
